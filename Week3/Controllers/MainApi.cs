@@ -15,6 +15,7 @@ namespace Week3.Controllers
             List<string> list1 = new List<string>();
             List<int> list2 = new List<int>();
             double sum, counter = 0, mean = 0, StSum, Stdev;
+            LogObject(lint);
             lint.Sort();
 
             foreach (int i in lint)
@@ -44,7 +45,18 @@ namespace Week3.Controllers
 
             }
 
+            
+
             return list1;
+        }
+        void LogObject(List<int> input)
+        {
+            for (int i =0; i < input.Count; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(input[i]);
+            }
+            
+
         }
     }
 }
